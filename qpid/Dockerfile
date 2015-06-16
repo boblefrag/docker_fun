@@ -1,5 +1,8 @@
+# Build with :
+# docker build -t qpid qpid/
+
 # Run with :
-# /usr/sbin/qpidd --config /etc/qpid/qpidd.conf
+# docker run -p 127.0.0.1:5672:5672 -t qpid /usr/sbin/qpidd --config /etc/qpid/qpidd.conf
 
 FROM debian:latest
 RUN echo deb http://ftp.de.debian.org/debian wheezy main >> /etc/apt/sources.list
